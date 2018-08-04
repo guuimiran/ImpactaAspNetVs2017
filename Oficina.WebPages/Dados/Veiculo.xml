@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<veiculos>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>097c6f86-dd76-4550-b1fc-d6687726f536</Id>
+    <Placa>ABC1234</Placa>
+    <Ano>2014</Ano>
+    <Observacao>Observação</Observacao>
+    <Modelo>
+      <Id>3</Id>
+      <Nome>Focus</Nome>
+      <Marca>
+        <Id>2</Id>
+        <Nome>Ford</Nome>
+      </Marca>
+    </Modelo>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Manual</Cambio>
+  </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>41f622f5-d7d7-4186-9697-cb82d425529b</Id>
+    <Placa>DDU8371</Placa>
+    <Ano>2017</Ano>
+    <Observacao>SDADSADASDAS</Observacao>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Argo</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Manual</Cambio>
+  </Veiculo>
+</veiculos>
