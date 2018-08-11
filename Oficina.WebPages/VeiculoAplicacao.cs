@@ -70,21 +70,35 @@ namespace Oficina.WebPages
             catch(FileNotFoundException ex)
             {
                 HttpContext.Current.Items.Add("MessagemErro",$"Arquivo{ex.FileName} não encontrado.");
+                throw;
             }
 
             catch (UnauthorizedAccessException)
             {
                 HttpContext.Current.Items.Add("MessagemErro", $"Arquivo sem permissão de gravação.");
+
+                //THROW SERVE PARA SER TRANSFERIDO DE UMA CLASSE PARA OUTRA.
+                throw;
             }
             catch (DirectoryNotFoundException)
             {
                 HttpContext.Current.Items.Add("MessagemErro", $"Caminho não encontrado.");
+                throw;
             }
 
-            catch (Exception)
+            catch (Exception excecao)
             {
                 HttpContext.Current.Items.Add("MessagemErro", $"Oooooops! Ocorreu um erro.");
-                //throw;
+
+
+                // logar o objeto excecao.
+
+                throw;
+            }
+
+            finally
+            {
+                //é executado sempre, independente de sucesso e erro.
             }
         }
     }

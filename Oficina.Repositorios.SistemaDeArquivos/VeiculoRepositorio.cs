@@ -22,14 +22,16 @@ namespace Oficina.Repositorios.SistemaDeArquivos
         {
             _caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,  ConfigurationManager.AppSettings["caminhoArquivoVeiculo"]);
 
-            _arquivoXml = XDocument.Load(_caminhoArquivo);//carregar o arquivo xml.
         }
 
 
-        public void Inserir(Veiculo veiculo)
+        public void Inserir<T>(T veiculo)
         {
+
+            _arquivoXml = XDocument.Load(_caminhoArquivo);//carregar o arquivo xml.
+
             var registro = new StringWriter();
-            new XmlSerializer(typeof(Veiculo)).Serialize(registro, veiculo);
+            new XmlSerializer(typeof(T)).Serialize(registro, veiculo);
 
             //ADICIONAR O VEICULO NO XML.
             _arquivoXml.Root.Add(XElement.Parse(registro.ToString())); //CHAMAR O METODO PARSE PARA VER SE O XML ESTA BEM FORMADO.

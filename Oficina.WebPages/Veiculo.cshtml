@@ -2,10 +2,7 @@
 
 @{ 
     var _veiculoAplicacao = new VeiculoAplicacao();
-    if (IsPost)
-    {
-        _veiculoAplicacao.Inserir();
-    }
+
 }
 <!DOCTYPE html>
 
@@ -13,29 +10,61 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cadastro de Veiculos</title>
+
+    <style>
+        label {
+            min-width: 100px;
+            display: inline-block;
+        }
+
+        input, select {
+            min-width: 200px;
+            min-height: 24px;
+            margin-bottom: 5px;
+        }
+
+            input[type=submit] {
+                width: 300px;
+            }
+
+
+            /*pegar apenas uma div para fazer object CSS*/
+        #mensagemErro {
+            heigth: 40px;
+            background-color: #dc3545;
+            margin-bottom: 10px;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 40px;
+
+        }
+    </style>
+
 </head>
-<body>
+<body onload="exibirMensagem()">
     <div>
     <h1> Cadastro de veiculos </h1>
-        <style>
+        <hr />
 
-            label {
-                min-width: 100px;
-                display: inline-block;
-            }
+        @{ 
+            if (IsPost)
+            {
+                try
+                {
+                    _veiculoAplicacao.Inserir();
 
-            input, select {
-                min-width: 200px;
-                min-height: 24px;
-                margin-bottom: 5px;
-            }
+                    //QueryString.
+                    Response.Redirect("Veiculo?mensagem=Veiculo gravado com sucesso!");
 
-                input[type=submit] {
-                    width: 300px;
                 }
-
-        </style>
-
+                catch
+                {
+                    //mensagem que vem no catch em caso de erro. ( isso serve para aparecer na tela ).
+                    <div id="mensagemErro">@HttpContext.Current.Items["MessagemErro"]</div>
+                }
+            }
+        }
 
         <hr/>
         <form method="post">
@@ -61,13 +90,14 @@
                 </select>
                 <br />
 
+            @*deixar o campo com a informação preenchida. Resquest.Form*@
             <label for="placa">Placa</label>
-            <input type="text" name="placa" id="placa" />
+            <input type="text" name="placa" id="placa" value="@Request.Form["placa"]"/>
                <br />
 
-
+            
             <label for="ano">Ano</label>
-            <input type="text" name="ano" id="ano" />
+            <input type="text" name="ano" id="ano" value="@Request.Form["ano"]" />
             <br />
 
             <label for="cor">Cor</label>
@@ -75,7 +105,7 @@
                 <option value="">Selecione</option>
                 @foreach (var cor in _veiculoAplicacao.Cores)
                 {
-                    <option value="@cor.Id">@cor.Nome</option>
+                   <option value="@cor.Id" selected="@Convert.ToBoolean(cor.Id.ToString() == Request.Form["cor"])"> @cor.Nome</option>
                 }
             </select>
             <br />
@@ -118,6 +148,21 @@
                 document.location.href = nomePagina + "?marcaId=" + marcaId;
 
 
+            }
+
+            function exibirMensagem() {
+
+                const params = (new URL(document.location)).searchParams;
+                const mensagem = params.get("mensagem");
+
+                if (mensagem) {
+
+                    alert(mensagem);
+
+                    //limpar
+                    document.location.href = "Veiculo";
+
+                }
             }
 
         </script>

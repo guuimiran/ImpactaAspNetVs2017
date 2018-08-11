@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.Sistem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.WebPages", "Oficina.WebPages\Oficina.WebPages.csproj", "{483C5E0D-873F-467A-8B98-19206465A44B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetVS2017.Capitulo02.Http.Testes", "AspNetVS2017.Capitulo02.Http.Testes\AspNetVS2017.Capitulo02.Http.Testes.csproj", "{F3F62BE9-2596-4F96-AD14-9FF8AAF64C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetVS2017.Capitulo03.Mvc.Portfolio", "AspNetVS2017.Capitulo03.Mvc.Portfolio\AspNetVS2017.Capitulo03.Mvc.Portfolio.csproj", "{53DE4D09-C543-4590-98A4-CF8F62B5EB03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,14 @@ Global
 		{483C5E0D-873F-467A-8B98-19206465A44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483C5E0D-873F-467A-8B98-19206465A44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483C5E0D-873F-467A-8B98-19206465A44B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F62BE9-2596-4F96-AD14-9FF8AAF64C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F62BE9-2596-4F96-AD14-9FF8AAF64C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F62BE9-2596-4F96-AD14-9FF8AAF64C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F62BE9-2596-4F96-AD14-9FF8AAF64C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53DE4D09-C543-4590-98A4-CF8F62B5EB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DE4D09-C543-4590-98A4-CF8F62B5EB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DE4D09-C543-4590-98A4-CF8F62B5EB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DE4D09-C543-4590-98A4-CF8F62B5EB03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
