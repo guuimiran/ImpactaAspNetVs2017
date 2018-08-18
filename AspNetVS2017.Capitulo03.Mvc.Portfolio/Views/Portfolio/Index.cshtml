@@ -1,0 +1,27 @@
+﻿@model AspNetVS2017.Capitulo03.Mvc.Portfolio.Models.PortfolioViewModel
+
+@{
+    ViewBag.Title = "Portfólio";
+}
+
+<h2>Portfólio</h2>
+
+<div class="row">
+    @foreach (var caminho in Model.CaminhosImagens)
+    {
+        <a href="@caminho" class="fancybox">
+            <img src="@caminho" alt="@caminho" class="img-responsive" />
+        </a>
+    }
+</div>
+
+@section scripts{
+
+<script type="text/javascript">
+
+    $(".fancybox").fancybox(); /*pegar todas as class que sao fancybox para aplicar,*/
+
+
+</script>
+
+}

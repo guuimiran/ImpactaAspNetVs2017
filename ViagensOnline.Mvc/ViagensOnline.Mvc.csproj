@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{53DE4D09-C543-4590-98A4-CF8F62B5EB03}</ProjectGuid>
+    <ProjectGuid>{72253E0B-1CD5-4BCE-A62B-3B25C4B8701D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AspNetVS2017.Capitulo03.Mvc.Portfolio</RootNamespace>
-    <AssemblyName>AspNetVS2017.Capitulo03.Mvc.Portfolio</AssemblyName>
+    <RootNamespace>ViagensOnline.Mvc</RootNamespace>
+    <AssemblyName>ViagensOnline.Mvc</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -143,33 +143,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ContatoViewModel.cs" />
-    <Compile Include="Models\PortfolioViewModel.cs" />
+    <Compile Include="Models\DestinoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\fancybox\blank.gif" />
-    <Content Include="Content\fancybox\fancybox_buttons.png" />
-    <Content Include="Content\fancybox\fancybox_loading%402x.gif" />
-    <Content Include="Content\fancybox\fancybox_loading.gif" />
-    <Content Include="Content\fancybox\fancybox_overlay.png" />
-    <Content Include="Content\fancybox\fancybox_sprite%402x.png" />
-    <Content Include="Content\fancybox\fancybox_sprite.png" />
-    <Content Include="Content\Imagens\Portfolio\img13.jpg" />
-    <Content Include="Content\Imagens\Portfolio\img14.jpg" />
-    <Content Include="Content\Imagens\Portfolio\img15.jpg" />
-    <Content Include="Content\Imagens\Portfolio\img16.jpg" />
-    <Content Include="Content\Imagens\Portfolio\img17.jpg" />
-    <Content Include="Content\Imagens\Portfolio\img18.jpg" />
-    <Content Include="Content\jquery.fancybox-buttons.css" />
-    <Content Include="Content\jquery.fancybox-thumbs.css" />
-    <Content Include="Content\jquery.fancybox.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -183,12 +165,6 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.fancybox-buttons.js" />
-    <Content Include="Scripts\jquery.fancybox-media.js" />
-    <Content Include="Scripts\jquery.fancybox-thumbs.js" />
-    <Content Include="Scripts\jquery.fancybox.js" />
-    <Content Include="Scripts\jquery.fancybox.pack.js" />
-    <Content Include="Scripts\jquery.mousewheel-3.0.6.pack.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -208,9 +184,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Portfolio\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -244,9 +219,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51138</DevelopmentServerPort>
+          <DevelopmentServerPort>52054</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51138/</IISUrl>
+          <IISUrl>http://localhost:52054/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
